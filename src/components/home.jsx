@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../containers/search_bar';
+import VideoList from '../containers/video_list';
 
 const Home = () => {
   return (
@@ -11,6 +12,9 @@ const Home = () => {
       </div>
       <div>
         This is a great home.
+      </div>
+      <div>
+        <VideoList />
       </div>
     </div>
   );
