@@ -9,15 +9,16 @@ import { createHistory as history } from 'history';
 
 import Home from './components/home';
 import About from './components/about';
+import videosReducer from './reducers/videos_reducer';
 import '../assets/stylesheets/application.scss';
 
 // State and reducers
 const initialState = {
-  changeMe: null
+  videos: []
 };
 
 const reducers = combineReducers({
-  changeMe: (state = null, action) => state
+  videos: videosReducer
 });
 
 const middlewares = applyMiddleware(reduxPromise, logger);

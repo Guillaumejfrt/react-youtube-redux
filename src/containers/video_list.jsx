@@ -10,4 +10,10 @@ class VideoList extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    videos: state.videos
+  };
+}
+
 export default VideoList;
