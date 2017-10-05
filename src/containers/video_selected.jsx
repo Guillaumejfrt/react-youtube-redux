@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 class VideoSelected extends Component {
   render() {
     const video = this.props.selectedVideo.id;
+    console.log(video);
     if (!video) {
       return <div>Loading...</div>;
     }
@@ -12,7 +13,7 @@ class VideoSelected extends Component {
     return (
       <div>
         <hr />
-        <iframe src={url}></iframe>
+        <iframe title={video.videoId} src={url} />
         <div className="details">
           <div>{this.props.selectedVideo.snippet.title}</div>
           <div>{this.props.selectedVideo.snippet.description}</div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import VideoSelected from '../containers/video_selected';
 
 const About = () => {
   return (
@@ -9,6 +10,9 @@ const About = () => {
       </div>
       <div>
         This is a React Router + Redux boilerplate from Le Wagon.
+      </div>
+      <div>
+        <VideoSelected />
       </div>
     </div>
   );
