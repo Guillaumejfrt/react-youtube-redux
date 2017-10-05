@@ -7,11 +7,11 @@ const Home = () => {
   return (
     <div className="app">
       <div>
-        <SearchBar />
         <strong>Home</strong> | <Link to="about">About</Link>
       </div>
+      <hr />
       <div>
-        This is a great home.
+        <SearchBar />
       </div>
       <div>
         <VideoList />
