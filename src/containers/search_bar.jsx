@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchVideos } from '../actions';
 import YTSearch from 'youtube-api-search';
+import { fetchVideos, selectedVideo } from '../actions';
 
 const API_KEY = 'AIzaSyDmb6Al9P1LrVQGctwbOzGmy7SS4emh2YI';
 
@@ -16,6 +16,7 @@ class SearchBar extends Component {
   youtubeSearch = (word) => {
     YTSearch({ key: API_KEY, term: word }, (videos) => {
       this.props.fetchVideos(videos);
+      this.props.selectedVideo(videos[0]);
     });
   }
   inputHandler = (event) => {
@@ -37,7 +38,7 @@ class SearchBar extends Component {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
-    { fetchVideos },
+    { fetchVideos, selectedVideo },
     dispatch
   );
 }

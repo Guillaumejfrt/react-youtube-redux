@@ -5,3 +5,10 @@ export function fetchVideos(videos) {
     payload: videos
   };
 }
+
+export function selectedVideo(video) {
+  return {
+    type: 'SELECTED_VIDEO',
+    payload: video
+  };
+}
