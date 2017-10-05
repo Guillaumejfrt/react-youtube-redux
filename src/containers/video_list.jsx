@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import VideoItem from './video_item';
+
 class VideoList extends Component {
   render() {
     console.log(this.props.videos);
     return (
       <div>
-        {this.props.videos.map(video => <div key={video.id.videoId}>{video.id.videoId}</div>)}
+        {this.props.videos.map(video => <VideoItem key={video.id.videoId} video={video} />)}
       </div>
     );
   }
