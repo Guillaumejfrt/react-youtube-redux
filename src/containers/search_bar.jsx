@@ -14,7 +14,9 @@ class SearchBar extends Component {
     };
   }
   youtubeSearch = (word) => {
+    console.log(word);
     YTSearch({ key: API_KEY, word }, (videos) => {
+      console.log(videos);
       this.props.fetchVideos(videos);
     });
   }
