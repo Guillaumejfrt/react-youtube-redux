@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchVideos } from '../actions';
+import YTSearch from 'youtube-api-search';
+
+const API_KEY = 'AIzaSyDmb6Al9P1LrVQGctwbOzGmy7SS4emh2YI';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -10,10 +13,15 @@ class SearchBar extends Component {
       keyword: ''
     };
   }
+  youtubeSearch = (word) => {
+    YTSearch({ key: API_KEY, word }, (videos) => {
+      this.props.fetchVideos(videos);
+    });
+  }
   inputHandler = (event) => {
     const keyword = event.target.value;
     this.setState({ keyword });
-    this.props.fetchVideos(keyword);
+    this.youtubeSearch(keyword);
   }
   render() {
     return (
