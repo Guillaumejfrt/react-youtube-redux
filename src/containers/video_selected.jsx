@@ -7,11 +7,16 @@ class VideoSelected extends Component {
     if (!video) {
       return <div>Loading...</div>;
     }
-    const url = `https://www.youtube.com/embed/${this.props.selectedVideo.id.videoId}`;
+    const url = `https://www.youtube.com/embed/${video.videoId}`;
     console.log(url);
     return (
       <div>
-        <iframe className="embed-responsive-item" className="embed-responsive-item" url={url} />
+        <hr />
+        <iframe src={url}></iframe>
+        <div className="details">
+          <div>{this.props.selectedVideo.snippet.title}</div>
+          <div>{this.props.selectedVideo.snippet.description}</div>
+        </div>
       </div>
     );
   }
