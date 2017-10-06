@@ -10,7 +10,7 @@ class VideoItem extends Component {
   render() {
     const video = this.props.video.snippet;
     return (
-      <div className="col-xs-12 col-sm-6">
+      <div className="">
         <div className="video-item" onClick={this.handleClick}>
           <div>
             <img src={video.thumbnails.default.url} alt="" />
