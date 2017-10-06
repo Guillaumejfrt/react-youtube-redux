@@ -7,7 +7,7 @@ class VideoList extends Component {
   render() {
     console.log(this.props.videos);
     return (
-      <div>
+      <div className="row">
         {this.props.videos.map(video => <VideoItem key={video.id.videoId} video={video} />)}
       </div>
     );

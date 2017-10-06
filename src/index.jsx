@@ -37,7 +37,7 @@ ReactDOM.render(
           <Route path="/about" exact component={About} />
         </Switch>
       </Router>
-      <SelectedVideo /> 
+      <SelectedVideo />
     </div>
   </Provider>,
   document.querySelector('.container')

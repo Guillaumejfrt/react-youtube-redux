@@ -10,12 +10,14 @@ class VideoItem extends Component {
   render() {
     const video = this.props.video.snippet;
     return (
-      <div className="video-item" onClick={this.handleClick}>
-        <div>
-          <img src={video.thumbnails.default.url} alt="" />
-        </div>
-        <div>
-          <p>{video.title}</p>
+      <div className="col-xs-12 col-sm-6">
+        <div className="video-item" onClick={this.handleClick}>
+          <div>
+            <img src={video.thumbnails.default.url} alt="" />
+          </div>
+          <div className="video-infos">
+            <p>{video.title}</p>
+          </div>
         </div>
       </div>
     );

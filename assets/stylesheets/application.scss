@@ -1,12 +1,23 @@
+body {
+  background-color: #F4F4F4;
+}
 .app {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .video-item {
+  background-color: white;
+  border: 1px solid #e3e3e3;
+  padding: 1em;
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1em;
-  p {
-    margin-left: 1em;
+  .video-infos {
+    padding: 1em;
+    p {
+      font-weight: 600;
+    }
   }
   &:hover {
     cursor: pointer;
