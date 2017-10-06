@@ -11,9 +11,6 @@ const About = () => {
       <div>
         This is a React Router + Redux boilerplate from Le Wagon.
       </div>
-      <div>
-        <VideoSelected />
-      </div>
     </div>
   );
 };

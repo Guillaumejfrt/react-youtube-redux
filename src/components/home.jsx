@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../containers/search_bar';
 import VideoList from '../containers/video_list';
-import VideoSelected from '../containers/video_selected';
 
 const Home = () => {
   return (
@@ -16,9 +15,6 @@ const Home = () => {
       </div>
       <div>
         <VideoList />
-      </div>
-      <div>
-        <VideoSelected />
       </div>
     </div>
   );
