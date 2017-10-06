@@ -4,12 +4,10 @@ import { connect } from 'react-redux';
 class VideoSelected extends Component {
   render() {
     const video = this.props.selectedVideo.id;
-    console.log(video);
     if (!video) {
-      return <div>Loading...</div>;
+      return <div>Select a video...</div>;
     }
     const url = `https://www.youtube.com/embed/${video.videoId}`;
-    console.log(url);
     return (
       <div>
         <hr />

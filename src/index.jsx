@@ -31,8 +31,9 @@ ReactDOM.render(
   <Provider store={createStore(reducers, initialState, middlewares)}>
     <Router history={history}>
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/about" exact component={About} />
+        <Route path="/" exact component={Home} >
+          <Route path="/about" exact component={About} />
+        </Route>
       </Switch>
     </Router>
   </Provider>,

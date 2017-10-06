@@ -27,8 +27,12 @@ class SearchBar extends Component {
     return (
       <div>
         <form className="form-group">
-          <input type="text" onChange={this.inputHandler} value={this.state.keyword} />
-          <button className="btn btn-danger">Search</button>
+          <input
+            type="text"
+            onChange={this.inputHandler}
+            value={this.state.keyword}
+            placeholder="Type here..."
+          />
         </form>
       </div>
     );
