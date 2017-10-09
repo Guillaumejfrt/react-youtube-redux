@@ -1,6 +1,9 @@
 body {
   background-color: #F4F4F4;
 }
+.main {
+  display: flex;
+}
 .app {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -30,5 +33,26 @@ body {
   }
   &:hover {
     cursor: pointer;
+  }
+}
+.video-selected {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3em;
+  .selected-videocard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 55%;
+    padding: 2em;
+    background-color: rgba(186, 22, 22, 0.1);
+    border: 1px solid #e3e3e3;
+    p {
+      margin-top: 1em;
+      font-weight: 600;
+    }
   }
 }

@@ -5,16 +5,18 @@ class VideoSelected extends Component {
   render() {
     const video = this.props.selectedVideo.id;
     if (!video) {
-      return <div>Select a video...</div>;
+      return <div className="video-selected">Select a video...</div>;
     }
     const url = `https://www.youtube.com/embed/${video.videoId}`;
     return (
-      <div>
+      <div className="video-selected">
         <hr />
-        <iframe title={video.videoId} src={url} />
-        <div className="details">
-          <div>{this.props.selectedVideo.snippet.title}</div>
-          <div>{this.props.selectedVideo.snippet.description}</div>
+        <div className="selected-videocard">
+          <iframe title={video.videoId} src={url} />
+          <div className="details">
+            <p>{this.props.selectedVideo.snippet.title}</p>
+            <p>{this.props.selectedVideo.snippet.description}</p>
+          </div>   
         </div>
       </div>
     );
